@@ -225,3 +225,22 @@ flask-app-ingress   <none>   *       192.168.49.2   80      11m
 ```
 
 Point browser to http://192.168.49.2 and refresh the page to see the Instance IDs changing based on the pod that the request is directed to.
+
+
+## Cleanup
+
+Delete the deployment
+
+```bash
+kubectl delete deploy flask-app
+```
+
+Delete the service
+```bash
+kubectl delete svc flask-app-service
+```
+
+Delete the ingress
+```bash
+kubectl delete ing flask-app-ingress
+```
